@@ -9,7 +9,7 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return const  SafeArea(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: Column(
@@ -22,7 +22,7 @@ class HomeViewBody extends StatelessWidget {
             ),
             Text(
               'Best Seller',
-              style: Styles.titlemeduim,
+              style: Styles.textStyle18,
             ),
             BestSellerlistViewitem(),
           ],
