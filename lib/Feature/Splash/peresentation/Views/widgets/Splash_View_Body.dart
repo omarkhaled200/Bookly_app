@@ -1,9 +1,11 @@
+import 'package:bookly_app/Core/utlis/App_Routers.dart';
 import 'package:bookly_app/Core/utlis/assets.dart';
 import 'package:bookly_app/Feature/Splash/peresentation/Views/widgets/sliding_animation.dart';
 import 'package:bookly_app/Feature/home/peresentation/Views/Home_view.dart';
 import 'package:bookly_app/constant.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -23,8 +25,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     navigateToHomeViews();
   }
-
-
 
   @override
   void dispose() {
@@ -56,10 +56,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
             .animate(animationController);
     animationController.forward();
   }
-    void navigateToHomeViews() {
+
+  void navigateToHomeViews() {
     Future.delayed(const Duration(seconds: 2), () {
-      Get.to(() => const HomeView(),
-          transition: Transition.fade, duration:ktranstionduration);
+      // Get.to(() => const HomeView(),
+      //     transition: Transition.fade, duration:ktranstionduration);
+
+      GoRouter.of(context).push(AppRouters.kHomeview,);
     });
   }
 }
