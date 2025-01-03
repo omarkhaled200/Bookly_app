@@ -1,9 +1,6 @@
 import 'package:bookly_app/Core/utlis/App_Routers.dart';
 import 'package:bookly_app/Core/utlis/assets.dart';
 import 'package:bookly_app/Feature/Splash/peresentation/Views/widgets/sliding_animation.dart';
-import 'package:bookly_app/Feature/home/peresentation/Views/Home_view.dart';
-import 'package:bookly_app/constant.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
