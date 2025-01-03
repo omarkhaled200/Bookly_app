@@ -1,8 +1,11 @@
+import 'package:bookly_app/Core/Widgets/Custom_Button.dart';
 import 'package:bookly_app/Core/utlis/Styles.dart';
+import 'package:bookly_app/Feature/home/peresentation/Views/widgets/Book_Actions.dart';
 import 'package:bookly_app/Feature/home/peresentation/Views/widgets/Book_Rating.dart';
 import 'package:bookly_app/Feature/home/peresentation/Views/widgets/CustomBookDetialsAppBar.dart';
 import 'package:bookly_app/Feature/home/peresentation/Views/widgets/Custom_Book_image_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class BookDetialsViewbody extends StatelessWidget {
   const BookDetialsViewbody({super.key});
@@ -20,12 +23,9 @@ class BookDetialsViewbody extends StatelessWidget {
             child: const CustomBookImageitem(),
           ),
           const SizedBox(
-            height: 40,
+            height: 30,
           ),
-      const    Text(
-            'The Jungle Book',
-            style: Styles.textStyle30
-          ),
+          const Text('The Jungle Book', style: Styles.textStyle30),
           const SizedBox(
             height: 2,
           ),
@@ -39,10 +39,17 @@ class BookDetialsViewbody extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 18,),
-        const  BookRating(
+          const SizedBox(
+            height: 16,
+          ),
+          const BookRating(
             mainAxisAlignment: MainAxisAlignment.center,
           ),
+            const SizedBox(
+            height: 18,
+          ),
+          const
+           BooksAction(),
         ],
       ),
     );
