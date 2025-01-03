@@ -1,3 +1,4 @@
+import 'package:bookly_app/Core/utlis/Styles.dart';
 import 'package:bookly_app/Feature/home/peresentation/Views/widgets/CustomBookDetialsAppBar.dart';
 import 'package:bookly_app/Feature/home/peresentation/Views/widgets/Custom_Book_image_item.dart';
 import 'package:flutter/material.dart';
@@ -8,14 +9,34 @@ class BookDetialsViewbody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    return  Padding(
-      padding:const EdgeInsets.symmetric(horizontal: 30.0),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Column(
         children: [
-        const  CustomBookDetialsAppBar(),
+          const CustomBookDetialsAppBar(),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: width*0.19 ),
-            child:const CustomBookImageitem(),
+            padding: EdgeInsets.symmetric(horizontal: width * 0.2),
+            child: const CustomBookImageitem(),
+          ),
+          const SizedBox(
+            height: 40,
+          ),
+      const    Text(
+            'The Jungle Book',
+            style: Styles.textStyle30
+          ),
+          const SizedBox(
+            height: 3,
+          ),
+          Opacity(
+            opacity: 0.7,
+            child: Text(
+              'Omar Khaled',
+              style: Styles.textStyle18.copyWith(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
           ),
         ],
       ),
