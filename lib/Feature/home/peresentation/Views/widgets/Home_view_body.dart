@@ -23,7 +23,10 @@ class HomeViewBody extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: kpaddinghorzental),
                   child: CustomAppBar(),
                 ),
-                Featuredlistview(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: kpaddinghorzental),
+                  child: Featuredlistview(),
+                ),
                 SizedBox(
                   height: 35,
                 ),
