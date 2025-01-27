@@ -3,6 +3,7 @@ import 'package:bookly_app/Core/utlis/Api_service.dart';
 import 'package:bookly_app/Feature/home/data/Models/book_model/book_model.dart';
 import 'package:bookly_app/Feature/home/data/Repos/Home_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl extends HomeRepo {
   final ApiClass apiClass;
@@ -20,13 +21,16 @@ class HomeRepoImpl extends HomeRepo {
       }
       return right(books);
     } catch (e) {
-      return left(ServerFailure());
+      if (e is DioException) {
+        return left(ServerFailure.fromDioException(e));
+      }
+      return left(ServerFailure(e.toString()));
     }
   }
 
-  @override
-  Future<Either<Failure, List<BookModel>>> fetchFeaturedBook() {
-    // TODO: implement fetchFeaturedBook
-    throw UnimplementedError();
-  }
+    @override
+    Future<Either<Failure, List<BookModel>>> fetchFeaturedBook() {
+      // TODO: implement fetchFeaturedBook
+      throw UnimplementedError();
+    }
 }
