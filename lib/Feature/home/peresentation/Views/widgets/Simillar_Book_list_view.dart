@@ -19,10 +19,10 @@ class SimilarBookListView extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 itemBuilder: (context, index) {
-                  return const Padding(
-                    padding: EdgeInsets.all(4.0),
+                  return  Padding(
+                    padding:const EdgeInsets.all(4.0),
                     child: CustomBookImageitem(
-                      imageurl: '',
+                      imageurl: state.books[index].volumeInfo!.imageLinks!.thumbnail ??"",
                     ),
                   );
                 });

@@ -11,7 +11,7 @@ class SimillarBookSection extends StatelessWidget {
       children: [
         Text('You Can also Like'),
         SizedBox(
-          height: 8,
+          height: 20,
         ),
         SimilarBookListView(),
       ],
