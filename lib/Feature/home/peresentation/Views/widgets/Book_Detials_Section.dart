@@ -45,7 +45,7 @@ class BookDetialsSection extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        const BooksAction(),
+         BooksAction(bookModel: book,),
       ],
     );
   }
