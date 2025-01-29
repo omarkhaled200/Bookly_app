@@ -1,4 +1,4 @@
-import 'package:bookly_app/Core/utlis/Api_service.dart';
+
 import 'package:bookly_app/Core/utlis/App_Routers.dart';
 import 'package:bookly_app/Core/utlis/Service_locator.dart';
 import 'package:bookly_app/Feature/home/data/Repos/Home_repo_impl.dart';
@@ -6,7 +6,7 @@ import 'package:bookly_app/Feature/home/peresentation/View_model/Featured_Book_C
 import 'package:bookly_app/Feature/home/peresentation/View_model/Newest_Book_Cubit/newest_book_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:bookly_app/constant.dart';
-import 'package:dio/dio.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
