@@ -21,7 +21,7 @@ class CustomBookImageitem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
                Icon(Icons.error_outline_outlined),
-              Text('No Data Found',style: Styles.textStyle14,),
+              Text('No Data Found',style: Styles.textStyle14,textAlign: TextAlign.center,),
             ],
           ),
         ),
