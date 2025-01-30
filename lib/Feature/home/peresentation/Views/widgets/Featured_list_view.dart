@@ -1,4 +1,5 @@
 import 'package:bookly_app/Core/Widgets/Custom_loading_indecator.dart';
+import 'package:bookly_app/Core/Widgets/Custom_sekelton_featured_books.dart';
 import 'package:bookly_app/Core/utlis/App_Routers.dart';
 import 'package:bookly_app/Core/utlis/Custom_error_message.dart';
 import 'package:bookly_app/Feature/home/peresentation/View_model/Featured_Book_Cubit/featured_book_cubit.dart';
@@ -6,6 +7,7 @@ import 'package:bookly_app/Feature/home/peresentation/Views/widgets/Custom_Book_
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:skeletonizer/skeletonizer.dart';
 
 class Featuredlistview extends StatelessWidget {
   const Featuredlistview({super.key});
@@ -33,7 +35,7 @@ class Featuredlistview extends StatelessWidget {
         } else if (state is FeaturedBookFailure) {
           return customErrormessage(errmessage: state.errmessage);
         } else {
-          return const CustomLoadingIndecator();
+      return const skeletonfeaturedbooks();
         }
       },
     );
